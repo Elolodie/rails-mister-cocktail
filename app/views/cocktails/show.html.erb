@@ -1,0 +1,22 @@
+<h1>Cocktail</h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cocktail.name %>
+</p>
+
+<p>
+  <% @cocktail.doses.each do |dose| %>
+    <tr>
+    <td><%= dose.ingredient.name %></td>
+    <td><%= dose.description %></td>
+    <% end %>
+    </td>
+    </tr>
+    <% end %>
+      <%= redirect_to "doses/new", cocktail: @cocktail, dose: @dose %>
+
+
+
+<%= link_to 'Back to list', cocktails_path %>
+
